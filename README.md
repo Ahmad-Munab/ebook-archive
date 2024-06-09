@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# E-Book Archive
 
-## Getting Started
+### A Platform for Developers to Learn New Skills and Technologies through PDF-Formatted Courses. Learn for Free with the Option to Upgrade to Our Premium Packages!
 
-First, run the development server:
+### Features:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+-   **User-friendly interface for viewing courses**
+-   **Live AI chat bot to help with any subject doubts**
+-   **Quizzes to enhance your learning experience**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+_(This project is made to improve our team collaboration skills and learn modern technologies with best practices.)_
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Pages
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### 1. Public/General Pages
 
-## Learn More
+-   **Landing:** `/`
+-   **Contact:** `/contact-us`
+-   **Pricing Packages:** `/pricing`
+-   **About (developers, etc. info):** `/about`
 
-To learn more about Next.js, take a look at the following resources:
+### 2. Main App
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### -- Students --
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+-   **User Dashboard:** `/app`
+-   **Library Page:** `/app/library`
+-   **Course Progress:** `/app/library/:course_id`
+-   **Reading Route:** `/app/live/:course_id`
+-   **User Settings Page:** `/app/settings`
 
-## Deploy on Vercel
+#### -- Course Creators --
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+-   **Sales Dashboard:** `/app/dashboard`
+-   **Withdrawal Page:** `/app/orders`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### 3. Courses
+
+-   **Course Details Page:** `/courses/:id`
+
+### 4. Auth Pages
+
+-   **Sign In:** `/sign-in`
+-   **Sign Up:** `/sign-up`
+-   **Onboarding:** `/onboarding`
+
+## Contribution Flow
+
+### Starting:
+
+-   `git clone [repo-url](https://github.com/Ahmad-Munab/ebook-archive.git)`
+
+### For Starting on a New Feature:
+
+#### (Switch to the main branch if not already)
+
+-   `git checkout main`
+
+#### Pull the Latest Code and Work on That
+
+-   `git pull origin main`
+
+#### Create a New Branch for the Feature and Switch
+
+-   `git checkout -b nickname/feat/feature-name`
+
+### For Pushing New Code:
+
+#### Commit Your Code
+
+-   `git add .`
+-   `git commit -m "Nickname: A brief explanation of your commit"`
+
+#### Pull the Latest Code from Main (it will hopefully auto-merge)
+
+-   `git fetch`
+-   `git pull origin main`
+
+#### Push Your Changes to Remote
+
+-   `git push origin your/branch/name`
+
+#### At the End of a Push, Always Switch to Main and Pull the Latest Code
+
+-   `git checkout main`
+-   `git pull`
+
+
+#
+
+- **@copyright (c) E-Book Archive 2024**
+- **Developed by @The Top Notch**
