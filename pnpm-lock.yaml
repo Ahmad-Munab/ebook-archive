@@ -15,33 +15,6 @@ dependencies:
     specifier: ^18
     version: 18.3.1(react@18.3.1)
 
-<<<<<<< HEAD
-devDependencies:
-  '@types/node':
-    specifier: ^20
-    version: 20.14.2
-  '@types/react':
-    specifier: ^18
-    version: 18.3.3
-  '@types/react-dom':
-    specifier: ^18
-    version: 18.3.0
-  eslint:
-    specifier: ^8
-    version: 8.57.0
-  eslint-config-next:
-    specifier: 14.2.3
-    version: 14.2.3(eslint@8.57.0)(typescript@5.4.5)
-  postcss:
-    specifier: ^8
-    version: 8.4.38
-  tailwindcss:
-    specifier: ^3.4.1
-    version: 3.4.4
-  typescript:
-    specifier: ^5
-    version: 5.4.5
-=======
   .:
     dependencies:
       '@radix-ui/react-icons':
@@ -96,7 +69,6 @@ devDependencies:
       typescript:
         specifier: ^5
         version: 5.4.5
->>>>>>> 2c948e906369844bdc25531b43ddc22c729e6fb9
 
 packages:
 
@@ -117,8 +89,6 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: ^6.0.0 || ^7.0.0 || >=8.0.0
-<<<<<<< HEAD
-=======
 
   '@eslint-community/regexpp@4.10.1':
     resolution: {integrity: sha512-Zm2NGpWELsQAD1xsJzGQpYfvICSsFkEpU0jxBjfdC6uNEWXcHnfs9hScFWtXVDVl+rBQJGrl4g1vcKIejpH9dA==}
@@ -1616,7 +1586,6 @@ snapshots:
       regenerator-runtime: 0.14.1
 
   '@eslint-community/eslint-utils@4.4.0(eslint@8.57.0)':
->>>>>>> 2c948e906369844bdc25531b43ddc22c729e6fb9
     dependencies:
       eslint: 8.57.0
       eslint-visitor-keys: 3.4.3
@@ -1831,10 +1800,13 @@ snapshots:
     optional: true
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   /@rushstack/eslint-patch@1.10.3:
     resolution: {integrity: sha512-qC/xYId4NMebE6w/V33Fh9gWxLgURiNYgVNObbJl2LZv0GUUItCcCqC5axQSwRaAgaxl2mELq1rMzlswaQ0Zxg==}
     dev: true
 =======
+=======
+>>>>>>> 2c948e906369844bdc25531b43ddc22c729e6fb9
   '@radix-ui/react-compose-refs@1.0.1(@types/react@18.3.3)(react@18.3.1)':
     dependencies:
       '@babel/runtime': 7.24.7
@@ -2252,6 +2224,10 @@ snapshots:
     resolution: {integrity: sha512-RRECPsj7iu/xb5oKYcsFHSppFNnsj/52OVTRKb4zP5onXwVF3zVmmToNcOfGC+CRDpfK/U584fMg38ZHCaElKQ==}
     engines: {node: '>=7.0.0'}
 =======
+  class-variance-authority@0.7.0:
+    dependencies:
+      clsx: 2.0.0
+
   class-variance-authority@0.7.0:
     dependencies:
       clsx: 2.0.0
@@ -4174,6 +4150,14 @@ snapshots:
     engines: {node: '>=14.0.0'}
     hasBin: true
 =======
+  tailwind-merge@2.3.0:
+    dependencies:
+      '@babel/runtime': 7.24.7
+
+  tailwindcss-animate@1.0.7(tailwindcss@3.4.4):
+    dependencies:
+      tailwindcss: 3.4.4
+
   tailwind-merge@2.3.0:
     dependencies:
       '@babel/runtime': 7.24.7
