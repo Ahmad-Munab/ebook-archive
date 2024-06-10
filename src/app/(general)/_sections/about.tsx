@@ -6,7 +6,7 @@ const About = () => {
       id="about"
       className="h-screen bg-green-200 flex items-center justify-center"
     >
-      <h1 className="text-5xl">About Section</h1>
+      <h1 className="text-5xl">About our website</h1>
     </section>
   );
 };
