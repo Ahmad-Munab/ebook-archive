@@ -1,8 +1,13 @@
+import React from "react";
+import { About, Features, Hero } from "./_sections";
+
 export default function Home() {
   return (
     <div>
-      <h1>Hello World</h1>
-      <p>Starting journey of ebbok archive</p>
+      <Hero />
+
+      <About />
+      <Features />
     </div>
   );
 }
