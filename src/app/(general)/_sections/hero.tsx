@@ -59,7 +59,7 @@ const Hero = () => {
         </motion.div>
         <motion.div
           variants={textVariants}
-          className="text-center md:text-left sm:justify-center sm:items-center"
+          className="w-full md:w-3/4 text-center md:text-left sm:justify-center sm:items-center"
         >
           <h1
             className={`${styles.heroHeadText} text-white text-2xl md:text-6xl`}
@@ -89,8 +89,14 @@ const Hero = () => {
         </motion.div>
         <motion.div
           variants={boxVariants}
-          className="bg-black w-full h-40 sm:w-[25rem] sm:h-[14rem] md:w-[50rem] md:h-[28rem] lg:w-[69rem] lg:h-[30rem] mt-10 md:mt-0 md:ml-10 sm:mb-20 lg:ml-20 "
-        ></motion.div>
+          className="relative bg-black w-full h-40 sm:w-[25rem] sm:h-[14rem] md:w-[50rem] md:h-[28rem] lg:w-[69rem] lg:h-[30rem] mt-10 md:mt-0 md:ml-10 sm:mb-20 lg:ml-20"
+        >
+          <img
+            src="https://i1.pickpik.com/photos/916/460/15/dark-gloomy-books-pages-e0c7b7e43f53cd1388e7c1e8e003151a.jpg" // Replace with your image URL
+            alt="Top Course"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        </motion.div>
       </motion.div>
       <motion.div
         variants={scrollVariants}
