@@ -77,7 +77,7 @@ const About = () => {
           variants={itemVariants}
         >
           <motion.img
-            src="https://via.placeholder.com/800x400" // Replace with your image URL
+            src="https://media-cms.virohan.com/staging/2_1_3cb521f7b1.jpg" // Replace with your image URL
             alt="Top Course"
             className="absolute inset-0 w-full h-full object-cover"
             initial="hidden"
