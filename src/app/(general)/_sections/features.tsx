@@ -3,12 +3,12 @@
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
-import { CanvasRevealEffect } from "../../../components/ui/CanvasRevealEffect";
+import { CanvasRevealEffect } from "@/components/ui/CanvasRevealEffect";
 
 const Approach = () => {
   return (
-    <section className="w-full py-20 bg-black-100">
-      <h1 className=" text-4xl text-center">
+    <section className="w-full py-20 bg-slate-900">
+      <h1 className=" text-4xl text-center text-white">
         What We <span className="text-primary underline">Have</span>
       </h1>
       {/* remove bg-white dark:bg-black */}
@@ -17,7 +17,7 @@ const Approach = () => {
         <Card
           title="Pdf"
           icon={<AceternityIcon order="Feature 1" />}
-          des="We have pdf."
+          des="We have pdf. Leveraging the best learning experience. Reading is the best way to learn rather than seeing videos."
         >
           <CanvasRevealEffect
             animationSpeed={5.1}
@@ -28,7 +28,7 @@ const Approach = () => {
         <Card
           title="Courses"
           icon={<AceternityIcon order="Feature 2" />}
-          des="We Have Courses"
+          des="We Have Courses. You can be student or developer or both. For maximum learning experience."
         >
           <CanvasRevealEffect
             animationSpeed={3}
@@ -46,9 +46,9 @@ const Approach = () => {
           {/* <div className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" /> */}
         </Card>
         <Card
-          title="Community"
+          title="Security"
           icon={<AceternityIcon order="Feature 3" />}
-          des="We Have Community"
+          des="We Have Security. All the subscription, payment, money transavtion to developers are verified by the admins."
         >
           <CanvasRevealEffect
             animationSpeed={3}
@@ -154,7 +154,7 @@ const AceternityIcon = ({ order }: { order: string }) => {
         />
         <span
           className="inline-flex h-full w-full cursor-pointer items-center 
-        justify-center rounded-full bg-slate-950 px-5 py-2 text-purple backdrop-blur-3xl font-bold text-2xl"
+        justify-center rounded-full bg-slate-950 px-5 py-2 text-purple backdrop-blur-3xl font-bold text-2xl text-white"
         >
           {order}
         </span>
