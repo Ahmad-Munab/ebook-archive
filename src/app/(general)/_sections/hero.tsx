@@ -42,7 +42,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="h-screen bg-blue-200 flex items-center justify-center relative"
+      className="h-screen bg-black-100 flex items-center justify-center relative"
     >
       <motion.div
         initial="hidden"
