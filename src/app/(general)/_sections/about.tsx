@@ -89,7 +89,7 @@ const About = () => {
             className="relative m-4 md:m-10 text-white z-10"
             variants={itemVariants}
           >
-            <Button>Let's Learn</Button>
+            <Button>Lets Learn</Button>
           </motion.div>
         </motion.div>
         <motion.div

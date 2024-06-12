@@ -1,9 +1,11 @@
+// Importing necessary libraries and components
 "use client";
 import { cn } from "@/lib/utils";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import React, { useMemo, useRef } from "react";
 import * as THREE from "three";
 
+// Component for the canvas reveal effect
 export const CanvasRevealEffect = ({
   animationSpeed = 0.4,
   opacities = [0.3, 0.3, 0.3, 0.5, 0.5, 0.5, 0.8, 0.8, 0.8, 1],
@@ -12,10 +14,6 @@ export const CanvasRevealEffect = ({
   dotSize,
   showGradient = true,
 }: {
-  /**
-   * 0.1 - slower
-   * 1.0 - faster
-   */
   animationSpeed?: number;
   opacities?: number[];
   colors?: number[][];
@@ -48,6 +46,7 @@ export const CanvasRevealEffect = ({
   );
 };
 
+// DotMatrix component
 interface DotMatrixProps {
   colors?: number[][];
   opacities?: number[];
@@ -65,6 +64,7 @@ const DotMatrix: React.FC<DotMatrixProps> = ({
   shader = "",
   center = ["x", "y"],
 }) => {
+  // useMemo hook for uniforms
   const uniforms = React.useMemo(() => {
     let colorsArray = [
       colors[0],
@@ -118,6 +118,7 @@ const DotMatrix: React.FC<DotMatrixProps> = ({
     };
   }, [colors, opacities, totalSize, dotSize]);
 
+  // Return JSX for the DotMatrix component
   return (
     <Shader
       source={`
@@ -175,12 +176,14 @@ const DotMatrix: React.FC<DotMatrixProps> = ({
   );
 };
 
+// ShaderMaterial component
 type Uniforms = {
   [key: string]: {
     value: number[] | number[][] | number;
     type: string;
   };
 };
+
 const ShaderMaterial = ({
   source,
   uniforms,
@@ -195,6 +198,7 @@ const ShaderMaterial = ({
   const ref = useRef<THREE.Mesh>();
   let lastFrameTime = 0;
 
+  // useFrame hook for updating the shader material
   useFrame(({ clock }) => {
     if (!ref.current) return;
     const timestamp = clock.getElapsedTime();
@@ -208,6 +212,7 @@ const ShaderMaterial = ({
     timeLocation.value = timestamp;
   });
 
+  // Function to prepare uniforms for the shader material
   const getUniforms = () => {
     const preparedUniforms: any = {};
 
@@ -289,13 +294,16 @@ const ShaderMaterial = ({
   );
 };
 
+// Shader component
 const Shader: React.FC<ShaderProps> = ({ source, uniforms, maxFps = 60 }) => {
   return (
-    <Canvas className="absolute inset-0  h-full w-full">
+    <Canvas className="absolute inset-0 h-full w-full">
       <ShaderMaterial source={source} uniforms={uniforms} maxFps={maxFps} />
     </Canvas>
   );
 };
+
+// Props for Shader component
 interface ShaderProps {
   source: string;
   uniforms: {
@@ -306,3 +314,6 @@ interface ShaderProps {
   };
   maxFps?: number;
 }
+
+// Exporting components
+export { Shader, ShaderMaterial };
