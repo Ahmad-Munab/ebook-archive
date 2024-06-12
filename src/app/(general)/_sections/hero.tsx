@@ -42,7 +42,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="h-screen bg-black-100 flex items-center justify-center relative"
+      className="h-screen w-screen bg-black-100 flex items-center justify-center relative"
     >
       <motion.div
         initial="hidden"
@@ -125,4 +125,4 @@ const Hero = () => {
   );
 };
 
-export default SectionWrapper(Hero, "");
+export default Hero;
