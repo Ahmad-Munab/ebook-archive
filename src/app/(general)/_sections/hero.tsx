@@ -6,6 +6,7 @@ import { Link as ScrollLink } from "react-scroll";
 import { motion } from "framer-motion";
 import { SectionWrapper } from "../../../hoc";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 const Hero = () => {
   // Define animation variants
@@ -48,7 +49,10 @@ const Hero = () => {
         initial="hidden"
         animate="visible"
         variants={containerVariants}
-        className={`${styles.paddingX} h-full max-w-7xl mx-auto flex flex-col md:flex-row gap-5 items-center justify-between`}
+        className={cn(
+          styles.paddingX,
+          "h-full max-w-7xl mx-auto flex flex-col md:flex-row gap-x-5 items-center justify-between p-4"
+        )}
       >
         <motion.div
           variants={circleVariants}
@@ -89,16 +93,22 @@ const Hero = () => {
         </motion.div>
         <motion.div
           variants={boxVariants}
-          className="relative bg-black w-full h-40 sm:w-[25rem] sm:h-[14rem] md:w-[50rem] md:h-[28rem] lg:w-[69rem] lg:h-[30rem] mt-10 md:mt-0 md:ml-10 sm:mb-20 lg:ml-20"
+          className="relative bg-transparent w-full h-40 sm:w-[25rem] sm:h-[14rem] md:w-[50rem] md:h-[28rem] lg:w-[69rem] lg:h-[30rem] mt-10 md:mt-0 md:ml-10 sm:mb-20 lg:ml-20"
         >
           <img
-            src="https://i1.pickpik.com/photos/916/460/15/dark-gloomy-books-pages-e0c7b7e43f53cd1388e7c1e8e003151a.jpg" // Replace with your image URL
+            src="/books.png" // Replace with your image URL
             alt="Top Course"
             className="absolute inset-0 w-full h-full object-cover"
           />
         </motion.div>
       </motion.div>
-      <motion.div
+
+      {/**
+       * @watch We dont need this
+       * @beautify
+       */}
+
+      {/* <motion.div
         variants={scrollVariants}
         className="absolute xs:bottom-20 bottom-32 w-full flex justify-center items-center"
         initial="hidden"
@@ -120,7 +130,7 @@ const Hero = () => {
             />
           </div>
         </ScrollLink>
-      </motion.div>
+      </motion.div> */}
     </section>
   );
 };
