@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import { Pricing } from "../_components/pricing";
 
-const Pricing = () => {
-  return (
-    <div>Pricing</div>
-  )
-}
+const PricingPage = () => {
+    return (
+        <>
+            <Pricing />
+        </>
+    );
+};
 
-export default Pricing
+export default PricingPage;

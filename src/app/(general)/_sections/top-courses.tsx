@@ -40,10 +40,10 @@ const TopCourses = () => {
         <section
             id="about"
             ref={ref}
-            className=" bg-white md:gap-16 gap-10 flex flex-col items-center justify-start md:py-20 py-10"
+            className=" bg-white md:gap-16 gap-10 flex flex-col items-center justify-start xl:px-[15%] sm:px-[5%] px-3 md:py-20 py-10"
         >
             <motion.h1
-                className="text-3xl md:text-5xl font-bold mt-8 flex space-x-2"
+                className="text-4xl md:text-5xl font-bold "
                 initial="hidden"
                 animate={controls}
                 variants={containerVariants}
@@ -52,14 +52,13 @@ const TopCourses = () => {
             </motion.h1>
             <motion.div
                 id="content"
-                className="flex flex-col md:flex-row  w-full gap-10 sm:px-44 px-4"
+                className="flex flex-col md:flex-row  w-full gap-10 "
                 initial="hidden"
                 animate={controls}
                 variants={containerVariants}
             >
                 <motion.div
-                    id="top-course"
-                    className="relative bg-black-200 w-full md:w-1/2 h-60 md:h-[26rem] flex justify-end items-end"
+                    className="relative bg-black-200 w-full md:w-1/2 h-60 md:h-[26rem] flex justify-end items-end rounded-2xl"
                     variants={itemVariants}
                 >
                     <motion.img
@@ -112,28 +111,27 @@ const TopCourses = () => {
                         >
                             <motion.div
                                 id="pfp"
-                                className="mr-2 bg-purple-500 h-10 w-10 rounded-full flex items-center justify-center text-white"
+                                className="mr-2 bg-green-500 h-10 w-10 rounded-full flex items-center justify-center text-white"
                                 initial="hidden"
                                 animate={controls}
                                 transition={{ duration: 0.5, delay: 0.2 }}
                                 variants={imageVariants}
                             >
-                                PFP
+                                AM
                             </motion.div>
-                            <p className="text-sm md:text-base text-black">
-                                Top Student Name
+                            <p className="text-sm md:text-base text-black font-semibold">
+                                Ahmad Munab
                             </p>
                         </motion.div>
                         <motion.p
-                            className="p-3 text-sm md:text-base"
+                            className="p-3 text-sm md:text-base font-semibold"
                             initial="hidden"
                             animate={controls}
                             transition={{ duration: 0.5, delay: 0.4 }}
                             variants={itemVariants}
                         >
-                            BRO I CANT MAKE LANDING PAGE IN SO MUCH LOW TIME AND
-                            I HAVE SO MANY THINGS YOU GUYS JUST GIVING ME MORE
-                            PRESSURE. JUST KILL ME ALREADY
+                            Very user friendly interface. Perfect for mastering
+                            any skills you need to learn.
                         </motion.p>
                     </motion.div>
                 </motion.div>
