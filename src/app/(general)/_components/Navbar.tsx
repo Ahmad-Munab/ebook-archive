@@ -1,19 +1,67 @@
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import Link from "next/link";
+
 const Navbar = () => {
-  return (
-    <nav className="bg-gray-800 p-4 fixed w-full z-10">
-      <ul className="flex justify-around">
-        <li className="text-white">
-          <a href="#hero">Hero</a>
-        </li>
-        <li className="text-white">
-          <a href="#about">About</a>
-        </li>
-        <li className="text-white">
-          <a href="#feature">Feature</a>
-        </li>
-      </ul>
-    </nav>
-  );
+    return (
+        <nav className="bg-gray-800 py-4 md:px-12 px-2 w-full flex justify-between items-center ">
+            <div className="flex gap-16 items-center">
+                <Link
+                    href={"/"}
+                    className="flex gap-4 justify-center items-center"
+                >
+                    <Image
+                        src={"/assets/icons/logo.png"}
+                        alt=""
+                        width={60}
+                        height={60}
+                    />
+                    <h1 className="md:text-2xl text-md text-white font-bold">
+                        E-Book Archive
+                    </h1>
+                </Link>
+
+                <div className="md:flex hidden gap-6">
+                    <Link
+                        className="text-white text-2xl font-normal hover:underline hover:text-white/70 transition-all duration-150"
+                        href={"/pricing"}
+                    >
+                        Pricing
+                    </Link>
+                    <Link
+                        className="text-white text-2xl font-normal hover:underline hover:text-white/70 transition-all duration-150"
+                        href={"/about"}
+                    >
+                        About
+                    </Link>
+                    <Link
+                        className="text-white text-2xl font-normal hover:underline hover:text-white/70 transition-all duration-150"
+                        href={"/contact"}
+                    >
+                        Contact
+                    </Link>
+                </div>
+            </div>
+
+            <div className="flex gap-4 ">
+                <Link href={"/sign-in"}>
+                    {" "}
+                    <Button
+                        variant={"outline"}
+                        className="text-white md:text-xl text-md md:py-2 md:px-4 py-1 px-2"
+                    >
+                        Sign In
+                    </Button>
+                </Link>
+                <Link href={"/sign-up"}>
+                    {" "}
+                    <Button className="text-white md:text-xl text-md md:py-2 md:px-4 py-1 px-2">
+                        Get Started
+                    </Button>
+                </Link>
+            </div>
+        </nav>
+    );
 };
 
 export default Navbar;

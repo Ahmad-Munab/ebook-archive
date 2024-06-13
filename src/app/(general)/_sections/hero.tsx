@@ -1,12 +1,10 @@
 "use client";
 
 import React from "react";
-import { styles } from "../../style";
-import { Link as ScrollLink } from "react-scroll";
 import { motion } from "framer-motion";
-import { SectionWrapper } from "../../../hoc";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import Image from "next/image";
+import Link from "next/link";
 
 const Hero = () => {
   // Define animation variants
@@ -41,18 +39,15 @@ const Hero = () => {
   };
 
   return (
-    <section
-      id="hero"
-      className="h-screen w-screen bg-black-100 flex items-center justify-center relative"
+    <motion.section
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
+      className="h-max w-full bg-black-100 flex flex-col md:flex-row gap-5 items-center justify-between md:px-[15%] px-2 md:py-20 py-10"
     >
       <motion.div
-        initial="hidden"
-        animate="visible"
-        variants={containerVariants}
-        className={cn(
-          styles.paddingX,
-          "h-full max-w-7xl mx-auto flex flex-col md:flex-row gap-x-5 items-center justify-between p-4"
-        )}
+        variants={textVariants}
+        className="w-full md:w-5/12 flex gap-4"
       >
         <motion.div
           variants={circleVariants}
@@ -61,77 +56,49 @@ const Hero = () => {
           <div className="w-5 h-5 rounded-full bg-[#00af55]" />
           <div className="w-1 h-40 sm:h-80 violet-gradient" />
         </motion.div>
-        <motion.div
-          variants={textVariants}
-          className="w-full md:w-3/4 text-center md:text-left sm:justify-center sm:items-center"
-        >
-          <h1
-            className={`${styles.heroHeadText} text-white text-2xl md:text-6xl`}
-          >
-            Learn <span className="text-secondary">Courses</span> <br /> And
-            Build <br /> Your <span className="text-secondary">Career</span>
-            <span className="text-[#00af55] underline"> Together!</span>
+        <div className="flex flex-col gap-4">
+          <h1 className={` text-white font-bold text-4xl md:text-6xl`}>
+            Master the perfect <span className="text-green-500">skill</span> and
+            start <span className="text-green-500">developing</span>
           </h1>
           <motion.div
             initial="hidden"
             animate="visible"
             variants={buttonVariants}
-            className="flex flex-col sm:flex-row items-center"
+            className="flex flex-row gap-6 mt-5 items-center"
           >
-            <Button className="mt-6">Get Started</Button>
-            <a
+            <Button
+              size={"lg"}
+              className="text-white font-semibold md:text-2xl text-xl px-4 py-6"
+            >
+              Get Started
+            </Button>
+            <Link
               href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
               target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 sm:mt-0 sm:ml-5"
             >
-              <Button variant="secondary" className="md:mt-6 sm:mt-0 sm:ml-5 ">
+              <Button
+                variant="outline"
+                className="text-white font-semibold md:text-2xl text-xl px-4 py-6"
+              >
                 Watch Demo
               </Button>
-            </a>
+            </Link>
           </motion.div>
-        </motion.div>
-        <motion.div
-          variants={boxVariants}
-          className="relative bg-transparent w-full h-40 sm:w-[25rem] sm:h-[14rem] md:w-[50rem] md:h-[28rem] lg:w-[69rem] lg:h-[30rem] mt-10 md:mt-0 md:ml-10 sm:mb-20 lg:ml-20"
-        >
-          <img
-            src="/books.png" // Replace with your image URL
-            alt="Top Course"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-        </motion.div>
+        </div>
       </motion.div>
-
-      {/**
-       * @watch We dont need this
-       * @beautify
-       */}
-
-      {/* <motion.div
-        variants={scrollVariants}
-        className="absolute xs:bottom-20 bottom-32 w-full flex justify-center items-center"
-        initial="hidden"
-        animate="visible"
+      <motion.div
+        variants={boxVariants}
+        className="relative bg-transparent w-5/12"
       >
-        <ScrollLink to="about" smooth={true} duration={500}>
-          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start cursor-pointer">
-            <motion.div
-              animate={{
-                y: [0, 30, 0],
-                opacity: [1, 0.3, 1],
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                repeatType: "loop",
-              }}
-              className="w-3 h-3 rounded-full bg-secondary mb-1"
-            />
-          </div>
-        </ScrollLink>
-      </motion.div> */}
-    </section>
+        <Image
+          src="/books.png" // Replace with your image URL
+          alt="Top Course"
+          width={600}
+          height={600}
+        />
+      </motion.div>
+    </motion.section>
   );
 };
 

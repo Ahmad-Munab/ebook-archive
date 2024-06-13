@@ -1,5 +1,4 @@
-import About from "./about";
+import TopCourses from "./top-courses";
 import Hero from "./hero";
-import Features from "./features";
 
-export { About, Hero, Features };
+export { TopCourses, Hero };
