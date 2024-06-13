@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import MobileDropdown from "./MobileDropdown";
@@ -55,13 +55,12 @@ const Navbar = () => {
         </SignedOut>
 
         <SignedIn>
-          <UserButton
-            appearance={{
-              elements: {
-                avatarBox: "h-[52px] w-[52px]",
-              },
-            }}
-          />
+          <Link
+            href="/app"
+            className={buttonVariants({ className: "text-white", size: "lg" })}
+          >
+            Dashboard
+          </Link>
         </SignedIn>
 
         <MobileDropdown />
