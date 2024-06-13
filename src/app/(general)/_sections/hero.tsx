@@ -43,7 +43,7 @@ const Hero = () => {
             initial="hidden"
             animate="visible"
             variants={containerVariants}
-            className="h-max w-full bg-black-100 flex flex-col md:flex-row gap-5 items-center justify-between md:px-[15%] px-2 md:py-20 py-10"
+            className="h-max w-full bg-black-100 flex flex-col md:flex-row gap-x-5 gap-y-3 items-center justify-between xl:px-[15%] sm:px-[8%] px-5 md:py-20 py-10"
         >
             <motion.div
                 variants={textVariants}
@@ -68,13 +68,13 @@ const Hero = () => {
                         initial="hidden"
                         animate="visible"
                         variants={buttonVariants}
-                        className="flex flex-row gap-6 mt-5 items-center"
+                        className="flex flex-row md:gap-6 gap-3 mt-5 items-center"
                     >
                         <Button
                             size={"lg"}
-                            className="text-white font-semibold md:text-2xl text-xl px-4 py-6"
+                            className="text-white font-semibold md:text-2xl text-md px-4 py-6"
                         >
-                            Get Started
+                            Start Learning
                         </Button>
                         <Link
                             href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
@@ -82,20 +82,21 @@ const Hero = () => {
                         >
                             <Button
                                 variant="outline"
-                                className="text-white font-semibold md:text-2xl text-xl px-4 py-6"
+                                className="text-white font-semibold md:text-2xl text-md px-4 py-6"
                             >
                                 Watch Demo
                             </Button>
                         </Link>
                     </motion.div>
+                    <p className=" text-white/80">* No credit card required.</p>
                 </div>
             </motion.div>
             <motion.div
                 variants={boxVariants}
-                className="relative bg-transparent w-5/12"
+                className="relative bg-transparent md:w-5/12 w-full"
             >
                 <Image
-                    src="/books.png" // Replace with your image URL
+                    src="/assets/books.png" // Replace with your image URL
                     alt="Top Course"
                     width={600}
                     height={600}
