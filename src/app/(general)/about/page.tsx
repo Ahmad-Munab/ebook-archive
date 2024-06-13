@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
+import { AboutWebsite, Features, OurTeam, ThisProjectText } from "../_sections";
 
 const About = () => {
   return (
-    <div>About</div>
-  )
-}
+    <>
+      <AboutWebsite />
+      <Features />
+      <OurTeam />
+      <ThisProjectText />
+    </>
+  );
+};
 
-export default About
+export default About;
