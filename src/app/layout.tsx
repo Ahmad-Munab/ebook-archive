@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../styles/globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
+import ToastContextProvider from "@/providers/ToastProvider";
+import "react-toastify/ReactToastify.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,7 +21,10 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en" className="no-scrollbar">
-        <body className={inter.className}>{children}</body>
+        <body className={inter.className}>
+          {children}
+          <ToastContextProvider />
+        </body>
       </html>
     </ClerkProvider>
   );
