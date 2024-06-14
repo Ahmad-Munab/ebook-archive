@@ -17,7 +17,6 @@ import contactFormValidation, {
   TContactFormValidator,
 } from "@/lib/validators/contact-validator";
 import { Bounce, toast } from "react-toastify";
-import axios from "axios";
 import emailjs from "@emailjs/browser";
 
 export function ContactForm() {
@@ -74,19 +73,15 @@ export function ContactForm() {
   return (
     <section className="px-8 py-8 lg:py-16 h-full w-full">
       <div className="container mx-auto h-full w-full flex flex-col items-center">
-        <h1
-          color="blue-gray"
-          className="mb-4 !text-3xl lg:!text-5xl font-extrabold"
-        >
+        <h1 color="blue-gray" className="!text-3xl lg:!text-5xl font-extrabold">
           Contact Us
         </h1>
-        <h1 className="font-normal !text-lg mx-auto max-w-3xl !text-gray-500 text-center p-5">
-          Want to know about something or facing problems?? No worries our team
-          and admins always gonna help you.
-        </h1>
+        <p className="font-normal text-base md:text-lg mx-auto max-w-lg !text-gray-500 text-center md:p-4 lg:text-xl p-2">
+          Want to say thank you to our team or report??
+        </p>
         <Form {...form}>
           <form
-            className="flex flex-col w-[600px] gap-y-[10px]"
+            className="flex flex-col w-[300px] gap-y-[10px] md:w-[400px] lg:w-[600px] h-[500px]"
             onSubmit={form.handleSubmit(onSubmit)}
           >
             <FormField
@@ -168,14 +163,14 @@ export function ContactForm() {
                   <FormControl>
                     <Textarea
                       placeholder="Message"
-                      className="focus:border-t-gray-900 border-black placeholder:text-[#403938] placeholder:opacity-65"
+                      className="focus:border-t-gray-900 border-black placeholder:text-[#403938] placeholder:opacity-65 no-scrollbar h-[100px]"
                       {...field}
                     />
                   </FormControl>
                 </FormItem>
               )}
             />
-            <Button className="w-full block" type="submit">
+            <Button className="w-full block text-white" type="submit">
               Send message
             </Button>
           </form>
