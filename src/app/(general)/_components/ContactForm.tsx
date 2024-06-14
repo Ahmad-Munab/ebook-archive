@@ -18,6 +18,7 @@ import contactFormValidation, {
 } from "@/lib/validators/contact-validator";
 import { Bounce, toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
+import { motion } from "framer-motion"; // Added motion for animations
 
 export function ContactForm() {
   const form = useForm({
@@ -71,7 +72,12 @@ export function ContactForm() {
   };
 
   return (
-    <section className="px-8 py-8 lg:py-16 h-full w-full">
+    <motion.section
+      initial={{ opacity: 0, y: 50 }} // Initial animation properties
+      animate={{ opacity: 1, y: 0 }} // Animation properties on load
+      exit={{ opacity: 0, y: -50 }} // Animation properties on exit
+      className="px-8 py-8 lg:py-16 h-full w-full"
+    >
       <div className="container mx-auto h-full w-full flex flex-col items-center">
         <h1 color="blue-gray" className="!text-3xl lg:!text-5xl font-extrabold">
           Contact Us
@@ -176,7 +182,7 @@ export function ContactForm() {
           </form>
         </Form>
       </div>
-    </section>
+    </motion.section>
   );
 }
 

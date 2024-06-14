@@ -8,13 +8,13 @@ datasource db {
 }
 
 model User {
-  id                    String  @id
+  id                    String   @id
   name                  String
-  email                 String  @unique
+  email                 String   @unique
   is_student            Boolean
   is_creator            Boolean
-  is_admin              Boolean
-  imageUrl              String  @db.Text
+  is_admin              Boolean?
+  imageUrl              String   @db.Text
   is_premium            Boolean
   subscription_duration Int?
   // Add relation to the course model to user model
