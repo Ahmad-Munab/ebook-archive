@@ -88,11 +88,19 @@ body,
 
 .violet-gradient {
   background: #147862;
-  background: linear-gradient(-90deg, #147862 0%, rgba(60, 51, 80, 0) 100%);
-  background: -webkit-linear-gradient(
-    -90deg,
+  background: linear-gradient(
+    90deg,
     #147862 0%,
-    rgba(60, 51, 80, 0) 100%
+    rgba(60, 51, 80, 0) 100%,
+    #147862 100%,
+    rgba(60, 51, 80, 0) 0%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    #147862 0%,
+    rgba(60, 51, 80, 0) 50%,
+    #147862 100%,
+    rgba(60, 51, 80, 0) 0%
   );
 }
 

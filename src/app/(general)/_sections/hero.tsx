@@ -7,36 +7,36 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Hero = () => {
-    // Define animation variants
-    const containerVariants = {
-        hidden: { opacity: 0, y: -50 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.2 } },
-    };
+  // Define animation variants
+  const containerVariants = {
+    hidden: { opacity: 0, y: -50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.2 } },
+  };
 
-    const circleVariants = {
-        hidden: { opacity: 0, scale: 0 },
-        visible: { opacity: 1, scale: 1, transition: { duration: 0.4 } },
-    };
+  const circleVariants = {
+    hidden: { opacity: 0, scale: 0 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.4 } },
+  };
 
-    const textVariants = {
-        hidden: { opacity: 0, x: -100 },
-        visible: { opacity: 1, x: 0, transition: { duration: 0.6 } },
-    };
+  const textVariants = {
+    hidden: { opacity: 0, x: -100 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.6 } },
+  };
 
-    const boxVariants = {
-        hidden: { opacity: 0, x: 100 },
-        visible: { opacity: 1, x: 0, transition: { duration: 0.8 } },
-    };
+  const boxVariants = {
+    hidden: { opacity: 0, x: 100 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.8 } },
+  };
 
-    const buttonVariants = {
-        hidden: { opacity: 0, y: 70 },
-        visible: { opacity: 1, y: 0, transition: { duration: 1 } },
-    };
+  const buttonVariants = {
+    hidden: { opacity: 0, y: 70 },
+    visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+  };
 
-    const scrollVariants = {
-        hidden: { opacity: 0, scale: 0, y: -100 },
-        visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 1.2 } },
-    };
+  const scrollVariants = {
+    hidden: { opacity: 0, scale: 0, y: -100 },
+    visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 1.2 } },
+  };
 
     return (
         <motion.section
