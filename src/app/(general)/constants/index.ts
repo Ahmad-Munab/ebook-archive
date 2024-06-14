@@ -103,7 +103,7 @@ export const testimonials = [
   },
   {
     testimonial:
-      "Front End Developer and Junior Developer of Our Team. He sometimes does backend work, but he mainly focuses on front-end. He has over 6 months+ of experience in front-end development.",
+      "Front End Developer and Junior Developer of Our Team. He sometimes does backend work, but he mainly focuses on front-end. He has over 6+ months of experience in front-end development.",
     name: "Amaan",
     designation: "Front End Developer",
     company: "Our Team",
