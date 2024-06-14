@@ -1,79 +1,97 @@
+"use client";
+
+import { FEATURES } from "../../constants";
+import Image from "next/image";
 import React from "react";
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
 import { motion } from "framer-motion";
-import "react-vertical-timeline-component/style.min.css";
-
-import { styles } from "../../../style";
-import { experiences } from "./constants";
-import { textVariant } from "../../../../utils/motion";
-
-type Experience = {
-  title: string;
-  company_name: string;
-  icon: any;
-  iconBg: string;
-  date: string;
-  points: string[];
-};
-
-const ExperienceCard = ({ experience }: { experience: Experience }) => (
-  <VerticalTimelineElement
-    contentStyle={{ background: "#1d1836", color: "#fff" }}
-    contentArrowStyle={{ borderRight: "7px solid #232631" }}
-    date={experience.date}
-    iconStyle={{ background: experience.iconBg }}
-    icon={
-      <div className="flex justify-center items-center w-full h-full">
-        <img
-          src={experience.icon}
-          alt={experience.company_name}
-          className="w-[60%] h-[60%] object-contain"
-        />
-      </div>
-    }
-  >
-    <div>
-      <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
-      <p
-        className="text-secondary text-[60px] font-semibold"
-        style={{ margin: 0 }}
-      >
-        {experience.company_name}
-      </p>
-    </div>
-    <ul className="mt-5 list-disc ml-5 space-y-2">
-      {experience.points.map((point, index) => (
-        <li
-          key={`experience-point-${index}`}
-          className="text-white-100 text-[14px] pl-1 tracking-wider "
-        >
-          {point}
-        </li>
-      ))}
-    </ul>
-  </VerticalTimelineElement>
-);
 
 const Features = () => {
   return (
-    <>
-      <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>What I have been doing so far</p>
-        <h2 className={styles.sectionHeadText}>Features.</h2>
-      </motion.div>
-
-      <div className="mt-20 flex flex-col">
-        <VerticalTimeline>
-          {experiences.map((experience, index) => (
-            <ExperienceCard key={index} experience={experience} />
-          ))}
-        </VerticalTimeline>
+    <motion.section
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
+      className="flex-col justify-center items-center overflow-hidden bg-feature-bg bg-center bg-no-repeat py-24 bg-black-100"
+    >
+      <div className="max-container padding-container relative w-full flex justify-center">
+        <div className="z-20 flex w-[85%] flex-col lg:w-[60%]">
+          <div className="relative">
+            <h2 className="bold-40 lg:bold-64 text-center text-primary text-5xl">
+              Our Features
+            </h2>
+          </div>
+          <ul className="mt-10 grid gap-10 md:grid-cols-2 lg:mg-20 lg:gap-20 relative">
+            {FEATURES.map((feature, index) => (
+              <motion.div
+                key={feature.title}
+                variants={itemVariants}
+                custom={index}
+                initial="hidden"
+                animate="visible"
+              >
+                <FeatureItem
+                  title={feature.title}
+                  icon={feature.icon}
+                  description={feature.description}
+                />
+              </motion.div>
+            ))}
+          </ul>
+        </div>
       </div>
-    </>
+    </motion.section>
   );
+};
+
+type FeatureItem = {
+  title: string;
+  icon: string;
+  description: string;
+};
+
+const FeatureItem = ({ title, icon, description }: FeatureItem) => {
+  return (
+    <motion.li
+      className="flex w-full flex-1 flex-col items-center"
+      variants={itemVariants}
+    >
+      {" "}
+      {/* Centered the FeatureItem */}
+      <motion.div
+        className="rounded-full p-4 lg:p-7 bg-green-50 flex items-center justify-center"
+        variants={itemVariants}
+      >
+        {" "}
+        {/* Centered the FeatureItem */}
+        <Image src={icon} alt="map" width={15} height={15} />
+      </motion.div>
+      <motion.h2
+        className="bold-20 lg:bold-32 mt-5 capitalize text-center text-primary text-3xl"
+        variants={itemVariants}
+      >
+        {title}
+      </motion.h2>{" "}
+      {/* Centered the text */}
+      <motion.p
+        className="regular-16 mt-5 bg-black-100/80 text-gray-30 lg:mt-[30px] lg:bg-none text-center text-white text-lg"
+        variants={itemVariants}
+      >
+        {" "}
+        {/* Centered the text */}
+        {description}
+      </motion.p>
+    </motion.li>
+  );
+};
+
+const containerVariants = {
+  hidden: { opacity: 0, y: -50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.2 } },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: -20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
 };
 
 export default Features;
