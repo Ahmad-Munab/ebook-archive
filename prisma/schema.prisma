@@ -8,7 +8,7 @@ datasource db {
 }
 
 model User {
-  id                    String  @id @default(cuid())
+  id                    String  @id
   name                  String
   email                 String  @unique
   is_student            Boolean
@@ -16,6 +16,9 @@ model User {
   is_admin              Boolean
   imageUrl              String  @db.Text
   is_premium            Boolean
-  subscription_duration Int
+  subscription_duration Int?
   // Add relation to the course model to user model
+
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
 }
