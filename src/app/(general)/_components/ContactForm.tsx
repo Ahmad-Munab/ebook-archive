@@ -86,7 +86,7 @@ export function ContactForm() {
         </h1>
         <Form {...form}>
           <form
-            className="flex flex-col w-[600px] gap-y-[10px]"
+            className="flex flex-col w-[200px] gap-y-[10px] md:w-[400px] lg:w-[600px]"
             onSubmit={form.handleSubmit(onSubmit)}
           >
             <FormField
