@@ -23,7 +23,7 @@ const Features = () => {
               Our Features
             </h2>
           </div>
-          <ul className="mt-10 grid gap-10 md:grid-cols-2 lg:mg-20 lg:gap-20 relative ">
+          <ul className="mt-5 grid gap-10 md:grid-cols-2 lg:mg-20 lg:gap-20 relative ">
             {FEATURES.map((feature, index) => (
               <motion.div
                 key={feature.title}
@@ -57,25 +57,31 @@ const FeatureItem = ({ title, icon, description }: FeatureItem) => {
     <motion.li
       className="flex w-full flex-1 flex-col items-center "
       variants={itemVariants}
+      initial="hidden"
+      animate="visible"
     >
       {/* <motion.div
         className="rounded-full p-4 lg:p-7 bg-green-50 flex items-center justify-center"
         variants={itemVariants}
+        initial="hidden"
+        animate="visible"
+      > */}
       {/* <Image src={icon} alt="map" width={15} height={15} /> */}
       {/* </motion.div> */}
       <motion.h2
-        className="bold-20 lg:bold-32 mt-5 capitalize text-center text-primary text-3xl underline"
+        className="bold-20 lg:bold-32 mt-5 capitalize text-center text-primary text-4xl underline"
         variants={itemVariants}
+        initial="hidden"
+        animate="visible"
       >
         {title}
       </motion.h2>{" "}
-      {/* Centered the text */}
       <motion.p
         className="regular-16 mt-5 bg-black-100/80 text-gray-30 lg:mt-[30px] lg:bg-none text-center text-white text-lg"
         variants={itemVariants}
+        initial="hidden"
+        animate="visible"
       >
-        {" "}
-        {/* Centered the text */}
         {description}
       </motion.p>
     </motion.li>
