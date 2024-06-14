@@ -15,7 +15,7 @@ const AboutWebsite = () => {
     visible: {
       opacity: 1,
       scale: 1,
-      transition: { duration: 1.6 },
+      transition: { duration: 1 },
     },
   };
 
@@ -37,7 +37,7 @@ const AboutWebsite = () => {
       >
         <div className="flex flex-col gap-4">
           <h1 className={`text-white font-bold text-2xl md:text-3xl`}>
-            <span className="text-green-500 text-5xl md:text-8xl text-center block">
+            <span className="text-green-500 text-3xl md:text-6xl lg:text-7xl sm:text-5xl text-center block whitespace-nowrap">
               E-Book Archive.
             </span>
             <motion.div
@@ -48,7 +48,6 @@ const AboutWebsite = () => {
               <div className="h-1 w-[50%] sm:w-[80%] violet-gradient" />
               <div className="w-5 h-5 rounded-full bg-[#00af55]" />
             </motion.div>
-            <br />
             <br />A Platform for Developers to Learn New Skills and Technologies
             through PDF-Formatted Courses. Learn for Free with the Option to
             Upgrade to Our Premium Packages!
