@@ -86,7 +86,7 @@ export const SOCIALS = {
 export const testimonials = [
   {
     testimonial:
-      "Full Stack Developer of Our Team. He mainly codes all of the back end and front end, but he works mainly on the back end. He does marketing sometimes. He has over 1+ year of experience in Full Stack Development.",
+      "Full Stack Developer of Our Team. He mainly codes all of the back end and front end, but he works mainly on the back end. He has over 1+ year of experience in Full Stack Development.",
     name: "Ahad",
     designation: "Full Stack Developer",
     company: "Our Team",
@@ -94,7 +94,7 @@ export const testimonials = [
   },
   {
     testimonial:
-      "Project Manager of Our Team. He ensures that all things are working properly and handles marketing. He breaks down the tasks and helps the team to work together. He has over 2 years of experience in DevOps.",
+      "Project Manager of Our Team. He breaks down the tasks and helps the team to work together. He also handles marketing. He has over 2+ years of experience in DevOps.",
     name: "Ahmad Munab",
     designation: "Devops Engineer",
     company: "Our Team",
@@ -103,7 +103,7 @@ export const testimonials = [
   },
   {
     testimonial:
-      "Front End Developer and Junior Developer of Our Team. He takes a long time, but his work is very cool and creative. He sometimes does backend work, but he mainly focuses on front-end. He has over 6 months of experience in front-end development.",
+      "Front End Developer and Junior Developer of Our Team. He sometimes does backend work, but he mainly focuses on front-end. He has over 6+ months of experience in front-end development.",
     name: "Amaan",
     designation: "Front End Developer",
     company: "Our Team",
