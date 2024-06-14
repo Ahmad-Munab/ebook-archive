@@ -83,3 +83,31 @@ export const SOCIALS = {
     "/assets/icons/youtube.svg",
   ],
 };
+export const testimonials = [
+  {
+    testimonial:
+      "Full Stack Developer of Our Team. He mainly codes all of the back end and front end, but he works mainly on the back end. He does marketing sometimes. He has over 1+ year of experience in Full Stack Development.",
+    name: "Ahad",
+    designation: "Full Stack Developer",
+    company: "Our Team",
+    image: "https://avatars.githubusercontent.com/u/151658507?s=64&v=4",
+  },
+  {
+    testimonial:
+      "Project Manager of Our Team. He ensures that all things are working properly and handles marketing. He breaks down the tasks and helps the team to work together. He has over 2 years of experience in DevOps.",
+    name: "Ahmad Munab",
+    designation: "Devops Engineer",
+    company: "Our Team",
+    image:
+      "https://media.licdn.com/dms/image/D5603AQHBr-j1DoLOjQ/profile-displayphoto-shrink_200_200/0/1710007129447?e=1723680000&v=beta&t=6j_KjosvBnhMrKwX6h3WOTcLqdUdaULdJnrDiCakiHg",
+  },
+  {
+    testimonial:
+      "Front End Developer and Junior Developer of Our Team. He takes a long time, but his work is very cool and creative. He sometimes does backend work, but he mainly focuses on front-end. He has over 6 months of experience in front-end development.",
+    name: "Amaan",
+    designation: "Front End Developer",
+    company: "Our Team",
+    image:
+      "https://media.licdn.com/dms/image/D4E03AQEMG5p2llVZKA/profile-displayphoto-shrink_200_200/0/1718274547711?e=1723680000&v=beta&t=aj__ew7xUMO6R36N-yaoEYU56Yo2xk32TNU8Oy4omCU",
+  },
+];
