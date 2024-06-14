@@ -29,7 +29,6 @@ export async function POST(req: Request) {
         email,
         is_student,
         is_creator,
-        is_admin,
         imageUrl,
         is_premium,
       },
