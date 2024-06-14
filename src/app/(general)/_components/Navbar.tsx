@@ -58,8 +58,7 @@ const Navbar = () => {
           <Link
             href="/app"
             className={buttonVariants({
-              className: "text-white hidden md:block",
-              size: "lg",
+              className: "text-white hidden md:block text-center",
             })}
           >
             Dashboard
