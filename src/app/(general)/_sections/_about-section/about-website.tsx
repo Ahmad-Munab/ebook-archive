@@ -36,8 +36,8 @@ const AboutWebsite = () => {
         className="w-full md:w-[80%] flex gap-4"
       >
         <div className="flex flex-col gap-4">
-          <h1 className={`text-white font-bold text-2xl md:text-3xl`}>
-            <span className="text-green-500 text-3xl md:text-6xl lg:text-7xl sm:text-5xl text-center block whitespace-nowrap">
+          <h1 className={`text-white text-2xl md:text-3xl`}>
+            <span className="text-green-500 text-3xl md:text-6xl lg:text-7xl sm:text-5xl text-center block whitespace-nowrap font-bold">
               E-Book Archive.
             </span>
             <motion.div

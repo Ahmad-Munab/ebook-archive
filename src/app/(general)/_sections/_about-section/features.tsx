@@ -69,7 +69,7 @@ const FeatureItem = ({ title, icon, description }: FeatureItem) => {
       {/* <Image src={icon} alt="map" width={15} height={15} /> */}
       {/* </motion.div> */}
       <motion.h2
-        className="bold-20 lg:bold-32 mt-5 capitalize text-center text-primary text-4xl underline"
+        className="bold-20 lg:bold-32 mt-5 capitalize text-center text-primary text-4xl"
         variants={itemVariants}
         initial="hidden"
         animate="visible"
