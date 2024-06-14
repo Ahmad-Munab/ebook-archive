@@ -2,7 +2,7 @@ import { Button, buttonVariants } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import MobileDropdown from "./MobileDropdown";
-import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import { SignedIn, SignedOut } from "@clerk/nextjs";
 
 const Navbar = () => {
   return (
@@ -46,7 +46,7 @@ const Navbar = () => {
               Sign In
             </Button>
           </Link>
-          <Link href={"/sign-up"}>
+          <Link href={"/sign-up"} className="md:block hidden">
             {" "}
             <Button className="text-white md:text-lg text-md md:py-2 md:px-4 py-1 px-2">
               Get Started
