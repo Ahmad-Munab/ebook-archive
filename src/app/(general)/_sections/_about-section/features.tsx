@@ -58,13 +58,9 @@ const FeatureItem = ({ title, icon, description }: FeatureItem) => {
       className="flex w-full flex-1 flex-col items-center "
       variants={itemVariants}
     >
-      {" "}
-      {/* Centered the FeatureItem */}
       {/* <motion.div
         className="rounded-full p-4 lg:p-7 bg-green-50 flex items-center justify-center"
         variants={itemVariants}
-      > */}{" "}
-      {/* Centered the FeatureItem */}
       {/* <Image src={icon} alt="map" width={15} height={15} /> */}
       {/* </motion.div> */}
       <motion.h2
